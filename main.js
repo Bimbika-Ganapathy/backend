@@ -1,9 +1,13 @@
-// import {a,b,c} from "./mymodule.js"
-// console.log(a, b, c);
-// import obj from "./mymodule.js";
-// console.log(obj);
+const fs =require ("fs")
+console.log(fs);
 
+console.log("starting")
+fs.writeFileSync("harry.txt","Harry is a good boy");
+fs.writeFile("harry2.txt","harry is no tgood",()=>{
+console.log("done")
+fs.readFile("harry2.txt", (error, data)=>{
+  console.log(error,data)
+})
+})
 
-const a = require("./mymodule2.js")
-console.log(a,__dirname,__filename)
-
+console.log("ending");
